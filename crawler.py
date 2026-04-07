@@ -7,5 +7,5 @@ web.encoding = 'utf-8'
 jsonfile = "crawler_data.json"
 
 json_data = json.loads(web.text)
-with open(jsonfile, 'w') as fp:
-    json.dump(json_data, fp)
+with open(jsonfile, 'w', encoding='utf-8') as fp:
+    json.dump(json_data, fp, ensure_ascii=False, indent=4)
