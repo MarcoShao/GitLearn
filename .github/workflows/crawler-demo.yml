@@ -7,6 +7,10 @@ on:
     - cron: "55 12 * * *"  # UTC 每天下午 12:55 執行此 action（等同於台灣晚上 8:55 執行）
   workflow_dispatch:  # 可以手動執行此 action
 
+
+permissions:
+  contents: write
+
 # 預先定義此 action 要幹嘛
 jobs:
   crawler-demo:
@@ -24,7 +28,7 @@ jobs:
         run: python crawler.py
       - name: Commit Data Back To GitHub Repo  # 將爬到的數據 commit 回 GitHub repo
         run: |
-          git config --global user.name "crawler-bot"
-          git config --global user.email "crawler-bot@gmail.com"
+          git config --global user.name "MarcoShao"
+          git config --global user.email "shaomarco1010@gmail.com"
           git add . && git commit -m "daily crawl"
           git push origin main
