@@ -28,7 +28,7 @@ jobs:
         run: python crawler.py
       - name: Commit Data Back To GitHub Repo  # 將爬到的數據 commit 回 GitHub repo
         run: |
-          git config --global user.name "MarcoShao"
-          git config --global user.email "shaomarco1010@gmail.com"
+          git config --global user.name "crawler-bot"
+          git config --global user.email "crawler-bot@gmail.com"
           git add . && git commit -m "daily crawl"
           git push origin main
