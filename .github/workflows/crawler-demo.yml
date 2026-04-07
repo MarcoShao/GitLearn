@@ -4,7 +4,7 @@ run-name: Crawler Demo Action
 # 觸發此 action 的時機
 on:
   schedule:
-    - cron: "00 12 * * *" 
+    - cron: "00 00 * * *" 
   workflow_dispatch:  # 可以手動執行此 action
 
 
